@@ -1,0 +1,76 @@
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, Noto Sans,
+    sans-serif;
+  color: var(--text);
+  background: white;
+  background-attachment: fixed;
+}
+
+
+/* Parent container */
+.summary {
+  display: flex;
+  flex-wrap: wrap;       /* allow wrapping on small screens */
+  justify-content: center; /* center the cards horizontally */
+  gap: 16px;             /* space between cards */
+  padding: 16px;
+}
+
+/* Cards */
+.card {
+  flex: 1 1 250px;      /* flex-grow:1, flex-shrink:1, flex-basis:250px */
+  max-width: 300px;     /* card won’t get too wide */
+  min-width: 200px;     /* card won’t get too small */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.card img {
+  width: 100%;           /* image fills the card width */
+  height: auto;          /* keep aspect ratio */
+}
+
+.card .container {
+  padding: 10px;
+}
+
+
+.search-section {
+  display: flex;
+  flex-direction: column;   /* stack items vertically */
+  align-items: center;      /* center horizontally */
+  margin-top: 40px;         /* space below cards */
+  gap: 12px;                /* space between title, input, results */
+}
+
+.search-section h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.search-section input {
+  width: 80%;              /* responsive width */
+  max-width: 400px;        /* cap the input width */
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+#results {
+  width: 80%;
+  max-width: 400px;
+  margin-top: 10px;
+}
